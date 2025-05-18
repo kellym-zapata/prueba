@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Leon</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="Logo-Be-Leon" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Título y descripción -->
+            <div class="header-text">
+                <h1>Tienda de Utensilios de Cocina Be Leon</h1>
+                <p>Productos de Alta Calidad para tu Hogar</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#promociones">Promociones</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <h2>Bienvenidos a Nuestra Tienda</h2>
+        <p>Encuentra utensilios, ollas, sartenes y accesorios de cocina de primera calidad.</p>
+        <img src="images/imagen-cocina.jpeg" alt="Imagen de productos de cocina">
+    </section>
+
+    <section id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="contenedor-productos">
+            <article>
+                <h3>Olla de Acero Inoxidable</h3>
+                <img src="images/olla.jpeg" alt="Olla de acero">
+                <p>Ideal para cocinar de forma saludable. Resistente y elegante.</p>
+                <button>Ver más</button>
+            </article>
+
+            <article>
+                <h3>Sartén Antiadherente</h3>
+                <img src="images/sarten.jpeg" alt="Sartén">
+                <p>Cocina tus alimentos favoritos sin que se peguen.</p>
+                <button>Ver más</button>
+            </article>
+
+            <article>
+                <h3>Juego de Cuchillos Profesionales</h3>
+                <img src="images/cuchillos.jpeg" alt="Juego de cuchillos">
+                <p>Precisión y calidad en cada corte.</p>
+                <button>Ver más</button>
+            </article>
+        </div>
+    </section>
+
+    <aside id="promociones">
+        <h2>Promociones Especiales</h2>
+        <p>¡Aprovecha nuestras ofertas limitadas!</p>
+        <ul>
+            <li>Descuento 20% en juegos de ollas.</li>
+            <li>Envío gratis por compras mayores a $200.000.</li>
+            <li>Accesorios de cocina en oferta.</li>
+        </ul>
+    </aside>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa dedicada a ofrecer productos de cocina de la mejor calidad, inspirados en la excelencia y la innovación.</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tienda de Cocina Be Leon. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

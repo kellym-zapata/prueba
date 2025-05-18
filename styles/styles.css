@@ -1,0 +1,299 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor principal del header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+    flex-wrap: wrap; /* Nuevo: para que los elementos bajen si no hay espacio */
+}
+
+/* Logo */
+.logo-img {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+/* Texto del encabezado */
+.header-text {
+    text-align: center;
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    color: white;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Navegación */
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #004aad;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0080ff;
+}
+
+/* Secciones generales */
+section {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+/* Títulos */
+h2 {
+    font-size: 2.2rem;
+    color: #004aad;
+    margin-bottom: 2rem;
+}
+
+/* Productos */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 20px;
+}
+
+.contenedor-productos article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contenedor-productos article:hover {
+    transform: translateY(-5px);
+}
+
+.contenedor-productos article img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.contenedor-productos article h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.contenedor-productos article p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contenedor-productos article button {
+    background-color: #004aad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contenedor-productos article button:hover {
+    background-color: #0080ff;
+}
+
+/* Aside (promociones) */
+aside {
+    background-color: #e0f0ff;
+    padding: 2rem;
+    margin: 4rem auto;
+    max-width: 1000px;
+    border-left: 5px solid #004aad;
+    border-radius: 10px;
+}
+
+aside h2 {
+    margin-bottom: 1rem;
+}
+
+aside ul {
+    list-style: disc inside;
+    padding-left: 1rem;
+}
+
+/* Formulario */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0080ff;
+}
+
+/* Footer */
+footer {
+    background-color: #004aad;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 4rem;
+}
+
+/* ==== Responsive Header y Productos ==== */
+@media (max-width: 992px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .logo-img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ==== Menú Hamburguesa ==== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.menu-toggle span {
+    background: #004aad;
+    height: 4px;
+    width: 25px;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .header-container {
+        align-items: flex-start;
+    }
+}
